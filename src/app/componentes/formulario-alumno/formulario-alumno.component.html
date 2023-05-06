@@ -1,0 +1,52 @@
+<section>
+  <fieldset>
+    <label for="">Rut del Alumno</label>
+    <input
+      type="number"
+      name="rut"
+      min="1"
+      max="100000000"
+      [value]="nuevoAlumno.rut"
+      (input)="nuevoRut($event)">
+  </fieldset>
+  <fieldset>
+    <label for="">Nombre del Alumno</label>
+    <input
+    type="text"
+    name="nombre"
+    [value]="nuevoAlumno.nombre"
+    (input)="nuevoNombre($event)">
+  </fieldset>
+  <fieldset>
+    <label for="">Apellido del Alumno</label>
+    <input
+    type="text"
+    name="apellido"
+    [value]="nuevoAlumno.apellido"
+    (input)="nuevoApellido($event)">
+  </fieldset>
+  <fieldset>
+    <label for="">Edad del Alumno</label>
+    <input
+      type="number"
+      name="edad"
+      min="1"
+      max="200"
+      [value]="nuevoAlumno.edad"
+      (input)="nuevoEdad($event)">
+  </fieldset>
+  <fieldset>
+    <label for="">Seleccione el tipo de seccion</label>
+    <select
+    name="tipo"
+    [value]="nuevoAlumno.seccion"
+    (change)="nuevoSeccion($event)">
+    <option value="L">L</option>
+    <option value="M">M</option>
+    <option value="H">H</option>
+    <option value="B">B</option>
+    <option value="R">R</option>
+  </select>
+  </fieldset>
+  <button (click)="guardarAlumno()">Guardar Nuevo Alumno</button>
+</section>

@@ -1,0 +1,12 @@
+<section>
+  <fieldset>
+    <label for="">Siglas de la Seccion</label>
+    <input
+    type="text"
+    name="nombre"
+    [value]="nuevoSeccion.siglaSeccion"
+    (input)="nuevoSigla($event)">
+  </fieldset>
+
+  <button (click)="guardarSeccion()">Guardar Nuevo Seccion</button>
+</section>
